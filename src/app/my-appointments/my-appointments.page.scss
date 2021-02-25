@@ -1,0 +1,120 @@
+ion-icon{
+    color: #3C3737;
+    
+}
+.title{
+    color: #272727;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0px;
+}
+.opd-appoint{
+    color: red;
+    font-family: sans-serif;
+}
+.video-conslt{
+    color: white;
+    font-family: sans-serif;
+}
+ion-segment{
+    background: #363A61;
+    background: #363A61;
+    margin-top: 3px;
+    height: 40px;
+}
+ion-segment-button ion-label{
+    font-size: 10px;
+}
+.doctor-name{
+    color: #272727;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+p{
+    font-family: sans-serif;
+    white-space: normal;
+    font-size: 10px;
+}
+.book-btn{
+    margin: 0;
+    margin-top: -20px;
+    img{
+        float: right;
+    }
+}
+.map-icon{
+    color: #363A61;
+    float: right;
+    font-size: 20px;
+}
+.lower-bottom{
+    border-bottom: 1px solid #ADADAD;
+    margin-left: 10px;
+    margin-right: 10px;
+    ion-avatar{
+        margin-left: -10px;
+    }
+}
+.header{
+    text-align: center;
+    ion-icon{
+      font-size: 22px;
+    }
+   }
+  .menu{
+    color: #E80C0A;
+    padding: 0;
+    margin-top: -5px;
+  }
+  .other-header-icons{
+    padding: 0;
+    margin-top: -5px;
+    padding-bottom: 5px;
+  }
+  .menu-icon{
+    font-size: 22px;
+    color: #272727; 
+  }
+
+  ion-menu-button button{
+    margin-top: -12px;
+  }
+  .notify{
+    float: right;
+    background: red;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  .call{
+    float: right;
+    background: #363A61;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  .pending{
+    float: right;
+    background: green;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+.completed{
+    float: right;
+    background: #363A61;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+.cancel{
+    float: right;
+    background: red;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "572521973594",
+    "project_id": "doctor-62a18",
+    "storage_bucket": "doctor-62a18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572521973594:android:49ff5d6b2bd9c5f86fd563",
+        "android_client_info": {
+          "package_name": "amandeephospital.doctorapp.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572521973594-sl4afpi233bpri2ikvt2r4bcs3cho9c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvMfVH1lx9z82MIMO47y4HA3dopFa6NNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572521973594-sl4afpi233bpri2ikvt2r4bcs3cho9c7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

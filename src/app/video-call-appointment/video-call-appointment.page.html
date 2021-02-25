@@ -1,0 +1,71 @@
+<div class="video-container">
+
+  <div class="agora_local">
+    <div class="video-buttons">
+    <ion-col style="margin-top: -50px;">
+        <span class="call-icon" (click)="leave()">
+          <ion-icon name="call"></ion-icon>
+        </span>
+      </ion-col>
+      <ion-row>
+        <ion-col size="12" class="call-options">
+          <span class="mute-icon">
+            <ion-icon name="mic-off" (click)="toggleAudio()" *ngIf="!audioEnabled"></ion-icon>
+            <ion-icon name="mic" (click)="toggleAudio()" *ngIf="audioEnabled"></ion-icon>
+          </span>&nbsp;&nbsp;
+          <span class="mute-icon">
+            <ion-icon name="volume-high" *ngIf="!speakerEnabled" (click)="toggleSpeaker()"></ion-icon>
+            <ion-icon name="volume-high" class="disable-speaker" *ngIf="speakerEnabled" (click)="toggleSpeaker()"></ion-icon>
+          </span>&nbsp;&nbsp;
+          <span class="mute-icon">
+            <ion-icon name="videocam" (click)="toggleVideo()" *ngIf="videoEnabled"></ion-icon>
+            <i class="fa fa-video-camera fa-2x" style="color: white;" (click)="toggleVideo()" *ngIf="!videoEnabled"></i>
+          </span>&nbsp;&nbsp;
+        </ion-col>
+      </ion-row>
+       </div>
+    <div id="agora_local" class="agora_local_fullscreen"></div>
+  </div>
+  <ng-container *ngIf="remoteCalls.length != 0" >
+    <div class="agora_remote" *ngFor="let remote of remoteCalls" [id]="remote">
+    </div>
+  </ng-container>
+
+  <div class="agora_remote" *ngIf="remoteCalls.length == 0">
+    <div class="connecting">&nbsp;Connecting....&nbsp;</div>
+  </div>
+</div>
+
+
+<!-- <div class="video-container" *ngIf="remote_screen">
+  <div class="agora_local">
+    <div class="video-buttons">
+      <ion-col style="margin-top: -50px;">
+        <span class="call-icon" (click)="leave()">
+          <ion-icon name="call"></ion-icon>
+        </span>
+      </ion-col>
+      <ion-row>
+        <ion-col size="12" class="call-options">
+          <span class="mute-icon">
+            <ion-icon name="mic-off" (click)="toggleAudio()" *ngIf="!audioEnabled"></ion-icon>
+            <ion-icon name="mic" (click)="toggleAudio()" *ngIf="audioEnabled"></ion-icon>
+          </span>&nbsp;&nbsp;
+          <span class="mute-icon">
+            <ion-icon name="volume-high"></ion-icon>
+          </span>&nbsp;&nbsp;
+          <span class="mute-icon">
+            <ion-icon name="videocam" (click)="toggleVideo()" *ngIf="videoEnabled"></ion-icon>
+            <i class="fa fa-video-camera fa-2x" style="color: white;" (click)="toggleVideo()" *ngIf="!videoEnabled"></i>
+          </span>&nbsp;&nbsp;
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="full_screen" *ngFor="let remote of remoteCalls" [id]="remote">
+    </div>
+  </div>
+  <div id="agora_local" class="small_screen"></div>
+  <div class="agora_remote" *ngIf="remoteCalls.length == 0">
+    <div class="connecting">&nbsp;Connecting....&nbsp;</div>
+  </div>
+</div> -->

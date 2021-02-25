@@ -1,0 +1,80 @@
+<ion-header *ngIf="!showSearchbar">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title" *ngIf="!showSearchbar">{{patient_details.user_name}}</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="searchPatient()">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding style="--background: #F8F8F8;">
+  <div id="chatMessage">
+
+    <div class="message" *ngFor="let m of messages">
+      <ion-row>
+        <ion-col size="4">
+
+        </ion-col>
+        <ion-col size="8">
+          <div class="innerMessage messageRight" *ngIf="m.send_by == 'doctor'">
+            <div class="msg" *ngIf="m.message_type == 1">
+              <p class="message">{{m.message}}</p><span class="date-time">{{m.created_at | date : 'short'}}</span>
+            </div>
+            <div class="msg" *ngIf="m.message_type != 1"><img style="width: 100%;height: 100px;" src="{{m.image_url}}"
+                (click)="showImage(m.image_url)" /><span class="date-time">{{m.created_at | date : 'short'}}</span>
+              <!-- <img *ngIf="m.status == 0" class="gif-loader" src="assets/imgs/loading-gif-png-5.gif"/> -->
+            </div>
+          </div>
+        </ion-col>
+       
+        <ion-col size="8">
+
+          <div class="innerMessage_a" *ngIf="m.send_by == 'patient'">
+            <ion-row>
+              <!-- <ion-col size="4">
+                 <img class="doctor-img" src="{{doctor_details.profile_picture}}" />
+              </ion-col> -->
+              <ion-col size="8" style="display: inherit;">
+                <img class="doctor-img" src="{{patient_details.profile_photo}}" />
+                <div class="messageLeft">
+                  <div class="msg " *ngIf="m.message_type == 1">
+                    <p style="color: #505050;" class="message">{{m.message}}</p><span class="date-time">{{m.created_at | date : 'short'}}</span>
+                  </div>
+                  <div class="msg" *ngIf="m.message_type != 1"><img style="width: 100%;height: 100px;"
+                      src="{{m.image_url}}" (click)="showImage(m.image_url)" /><span
+                      class="date-time">{{m.created_at | date : 'short'}}</span>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="getPicture()" style="margin-top: -15px;">
+      <ion-button>
+        <ion-icon name="add" class="camera-icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-textarea #input type="text" name="message" placeholder="Type message here...." [(ngModel)]="message"></ion-textarea>
+
+    <ion-buttons slot="end" *ngIf="message != ''">
+      <ion-button (click)="sendMessage()" class="send-btn">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

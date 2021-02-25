@@ -1,0 +1,62 @@
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0px;
+}
+
+.title{
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 15px !important;
+}
+
+.innerMessage{
+    display: inline-block;
+    padding: 5px 10px;
+    // background-color: #007aff;
+    margin: 5px;
+    color: white;
+    border-radius: 3px;
+  }
+  .userName {
+    font-weight: bold;
+    font-size: 80%;
+  }
+  .message {
+    font-size: 14px;
+    font-family: sans-serif;
+
+  }
+  .message:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .messageLeft {
+    float: left;
+    background: #F0F0F0;
+    color: #272727;
+  }
+  
+  .messageRight {
+    float: right;
+    background: #363A61;
+  }
+  .camera-icon{
+      color: #363A61;
+  }
+  .send-btn{
+    background: red;
+    border-radius: 100px;
+    padding-left: 6px;
+    padding-right: 6px;
+    ion-icon{
+        color: white;
+        font-size: 12px;
+    }
+  }
+
+  .gif-loader{
+    position: relative;
+    top: -100px;
+    width: 15px;
+    left: 50px;
+}

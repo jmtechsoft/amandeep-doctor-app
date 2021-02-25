@@ -1,0 +1,67 @@
+.logo{
+    text-align: center;
+    margin-top: 40px;
+    img{
+        width: 100px;
+    }
+}
+.logo-text{
+    text-align: center;
+    font-family: sans-serif;
+    h6{
+        color: #222C3C;
+    }
+}
+.phone-number{
+    color: #6C6969;
+    font-family: sans-serif;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    ion-label{
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+}
+
+
+.call-icon{
+    margin-top: 1px;
+    margin-left: -20px;
+}
+.lower-bottom{
+    border-bottom: 1px solid #ADADAD;
+    height: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -5px;
+}
+.spinner-class{
+    --background: transparent !important;
+}
+
+.dial-code{
+   margin-left:10px;
+   ion-label{
+    border-right: 1px solid;
+    /* margin-right: 11px; */
+    padding-right: 4px;
+    font-size: 12px;
+    
+   }
+}
+ion-select {
+    min-width: 100vw;
+  }
+  .sign-up-col{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .sign-up{
+    color: #6C6969;
+    font-family: sans-serif;
+  }
+  ion-label{
+    color: #6C6969;
+    font-family: sans-serif;
+  }

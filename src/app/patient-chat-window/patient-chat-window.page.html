@@ -1,0 +1,63 @@
+<ion-header *ngIf="!showSearchbar">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title" *ngIf="!showSearchbar">{{patient_details.user_name}}</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="searchPatient()">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="chatMessage">
+
+    <div class="message" *ngFor="let m of messages">
+
+      <div class="innerMessage messageRight" *ngIf="m.send_by == 'doctor' && m.message_type == 1 ">
+        <div class="msg" *ngIf="m.message_type == 1">{{m.message}}</div>
+        <div class="msg" *ngIf="m.message_type != 1"><img style="width: 100%;height: 100px;" src="{{m.image_url}}" (click)="showImage(m.image_url)"/></div>
+      </div>
+
+
+      <div class="innerMessage messageRight" *ngIf="m.send_by == 'doctor' && m.message_type != 1" style="width: 40%;">
+        <div class="msg" *ngIf="m.message_type == 1">{{m.message}}</div>
+        <div class="msg" *ngIf="m.message_type != 1"><img style="width: 100%;height: 100px;" src="{{m.image_url}}" (click)="showImage(m.image_url)"/></div>
+      </div>
+
+      <div class="innerMessage messageLeft" *ngIf="m.send_by == 'patient' && m.message_type == 1">
+        <div class="msg" *ngIf="m.message_type == 1">{{m.message}}</div>
+        <div class="msg" *ngIf="m.message_type != 1"><img style="width: 100%;height: 100px;" src="{{m.image_url}}" (click)="showImage(m.image_url)"/></div>
+      </div>
+
+      <div class="innerMessage messageLeft" *ngIf="m.send_by == 'patient' && m.message_type != 1" style="width: 40%;">
+        <div class="msg" *ngIf="m.message_type == 1">{{m.message}}</div>
+        <div class="msg" *ngIf="m.message_type != 1"><img style="width: 100%;height: 100px;" src="{{m.image_url}}" (click)="showImage(m.image_url)"/></div>
+      </div>
+
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="getPicture()">
+      <ion-button>
+        <ion-icon name="add" class="camera-icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-input #input type="text" name="message" placeholder="Type message here...." [(ngModel)]="message"></ion-input>
+
+    <ion-buttons slot="end" *ngIf="message != ''">
+      <ion-button (click)="sendMessage()" class="send-btn">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

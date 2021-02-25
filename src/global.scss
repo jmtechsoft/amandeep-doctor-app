@@ -1,0 +1,300 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+.spinner-class{
+    --background: transparent !important;
+}
+
+ion-searchbar ion-icon {
+    right: 16px !important;
+    left: auto !important;
+  }
+  .searchbar-input-container.sc-ion-searchbar-ios {
+    height: 36px;
+    border-radius: 10px;
+    background: white;
+}
+.searchbar-left-aligned.sc-ion-searchbar-ios-h .searchbar-input.sc-ion-searchbar-ios {
+    padding-left: unset;
+    -webkit-padding-start: 30px;
+    padding-inline-start: 30px;
+    background: white;
+    font-size: 12px;
+
+}
+.searchbar-left-aligned.sc-ion-searchbar-ios-h .searchbar-search-icon.sc-ion-searchbar-ios {
+    margin-left: unset;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+    color: #3C3737;
+}
+.searchbar-clear-icon {
+    display: none !important;
+}
+.sc-ion-input-ios-h {
+    --padding-top: 10px;
+    --padding-end: 10px;
+    --padding-bottom: 10px;
+    --padding-start: 0;
+    font-size: 12px;
+}
+.select-text {
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 16px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.datetime-text {
+    font-family: inherit;
+    font-size: 12px;
+    font-style: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-decoration: inherit;
+    text-indent: inherit;
+    text-overflow: inherit;
+    text-transform: inherit;
+    text-align: inherit;
+    white-space: inherit;
+    color: inherit;
+    -ms-flex: 1;
+    flex: 1;
+    min-height: inherit;
+    direction: ltr;
+    overflow: inherit;
+}
+
+.days-btn.today p {
+    color: red !important;
+}
+.days-btn.today.on-selected p {
+    color: white !important;
+}
+
+
+    .days-btn.on-selected {
+        background: red !important;
+       
+    }
+
+    ion-datetime{
+        font-size: 12px;
+    }
+    .picker-button.sc-ion-picker-ios, .picker-button.ion-activated.sc-ion-picker-ios {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 44px;
+        background: transparent;
+        color: red;
+        font-size: 16px;
+    }
+    .picker-opt {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        height: 46px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        background: transparent;
+        color: inherit;
+        font-size: 20px;
+        line-height: 42px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        pointer-events: auto;
+        color: #363A61;
+        font-weight: bold;
+    }
+    ion-button{
+        --background-activated:#E80C0A;
+        --background-hover:#E80C0A;
+        --background-focused:#E80C0A;
+        
+    }
+    .alert-button.sc-ion-alert-ios {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-width: 50%;
+        height: 44px;
+        border-top: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2);
+        border-right: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2);
+        background-color: transparent;
+        color: red;
+        font-size: 10px;
+        overflow: hidden;
+    }
+
+   
+.otp-input {
+    width: 60px !important;
+    font-size: 18px !important;
+    height: 50px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #ADADAD !important;
+    border-radius: 0 !important;
+}
+.ion-color-danger {
+    --ion-color-base: red !important;
+    --ion-color-base-rgb: var(--ion-color-danger-rgb, 235, 68, 90) !important;
+    --ion-color-contrast: var(--ion-color-danger-contrast, #fff) !important;
+    --ion-color-contrast-rgb: var(--ion-color-danger-contrast-rgb, 255, 255, 255) !important;
+    --ion-color-shade: var(--ion-color-danger-shade, #cf3c4f) !important;
+    --ion-color-tint: var(--ion-color-danger-tint, #ed576b) !important;
+}
+[aria-checked=true].sc-ion-alert-ios .alert-radio-label.sc-ion-alert-ios {
+    color: #363A61;
+    font-weight: bold;
+}[aria-checked=true].sc-ion-alert-ios .alert-radio-inner.sc-ion-alert-ios {
+    left: 7px;
+    top: -7px;
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-width: 2px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-style: solid;
+    border-color: #363A61;
+}
+
+iframe{
+    width: 100% !important;
+    height: 100% !important;
+     border-radius: 15px;
+}
+.ytp-large-play-button svg{
+    border-radius: 50% !important;
+    height: 50px !important;
+    background-color: white !important;
+  }
+  .ytp-large-play-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px !important;
+    height: 48px;
+    margin-left: -15px !important;
+    margin-top: -24px;
+    -moz-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+    -webkit-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+    transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+    z-index: 63;
+}
+.small-modal{
+    .modal-wrapper {
+        position: absolute;
+        bottom: 200px;
+        min-height: initial;
+        top: initial;
+        height: 50%;
+    }
+}
+.action-sheet-button.sc-ion-action-sheet-ios {
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: var(--button-background);
+    font-family: inherit;
+    overflow: hidden;
+    color: #363A61 !important;
+}
+
+#tawkchat-minified-box {
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 999995;
+    text-align: left;
+    font-size: 16px;
+    display: none;
+}
+#mh-page-header {
+    padding-left: 15px;
+    margin-bottom: 20px;
+    display: none;
+}
+iframe .header-top.fixed-top {
+    position: relative!important;
+    left: auto;
+    top: auto;
+    display: none;
+}
+.cta-mobile {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: none !important;
+}
+:host(.checkbox-checked) .checkbox-icon, :host(.checkbox-indeterminate) .checkbox-icon {
+    border-color:  #363A61;
+    background:  #363A61;
+}
+.segment-button-checked {
+    background: var(--background-checked);
+    color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+ion-segment-button{
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+ion-toolbar.ion-color.sc-ion-searchbar-ios-h:not(.ion-color) .searchbar-input.sc-ion-searchbar-ios, ion-toolbar.ion-color .sc-ion-searchbar-ios-h:not(.ion-color) .searchbar-input.sc-ion-searchbar-ios {
+    background: rgba(var(--ion-color-contrast-rgb), 0.07);
+    color: black;
+}

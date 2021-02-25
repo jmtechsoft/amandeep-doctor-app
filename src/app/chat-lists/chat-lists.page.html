@@ -1,0 +1,57 @@
+<ion-header *ngIf="!showSearchbar">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title" *ngIf="!showSearchbar">Chats</ion-title>
+     <ion-buttons slot="end">
+      <ion-button (click)="searchPatient()">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-header *ngIf="showSearchbar">
+  <ion-toolbar color="danger" style=" padding-top: 10px;">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar *ngIf="showSearchbar" animated="true" type="url" (ionInput)="search($event)" (ionBlur)="stopSearch()" placeholder=""></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="searchPatient()"  *ngIf="!showSearchbar">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stopSearch()"  *ngIf="showSearchbar">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item class="lower-bottom" *ngFor="let c of chat_list" (click)="goToChatWindow(c.sender_id,c.reciever_id,c.patient_details)">
+
+      <ion-avatar slot="start">
+        <img src="{{c.patient_details.profile_photo}}" *ngIf="c.patient_details.profile_photo != null">
+        <img src="assets/imgs/no-profile.png" *ngIf="c.patient_details.profile_photo == null">
+      </ion-avatar>
+      <ion-label>
+        <h2 class="doctor-name">{{c.patient_details.user_name}}<span class="date-time">{{c.latest_msg[0].created_at | date : 'short'}}</span>
+          <!-- <ion-icon class="map-icon" name="map-outline" (click)="showMap(a.location_name,a.address)"></ion-icon> -->
+        </h2>
+        <p *ngIf="c.latest_msg[0].message_type == 1">{{c.latest_msg[0].message}}
+        </p>
+        <p *ngIf="c.latest_msg[0].message_type != 1 && c.latest_msg[0].send_by == 'doctor'">You sent image
+        </p>
+        <p *ngIf="c.latest_msg[0].message_type != 1 && c.latest_msg[0].send_by == 'patient'">Sent you image
+        </p>
+        
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

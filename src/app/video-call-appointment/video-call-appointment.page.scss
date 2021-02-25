@@ -1,0 +1,159 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100%;
+  }
+  .bottom-right {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    width: 40%;
+    height: 40%;   
+ }  
+ .call-icon{
+    background-color: red;
+    padding-top: 27px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: 100px;
+    ion-icon{
+        font-size: 30px;
+        color: white;
+    }
+ }
+ .mute-icon{
+  background-color: #363A61;
+  padding-top: 27px;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
+  border-radius: 100px;
+
+    ion-icon{
+        font-size: 30px;
+        color: white;
+    }
+
+ }
+
+ .call-options{
+    text-align: center;
+    margin-top: 30px;
+ }
+
+
+ .fa.fa-video-camera:after {
+  position: absolute;
+  content: "/";
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  left: 0;
+  top: 0;
+  text-shadow: 3px 0px 0px rgba(0, 0, 0, 1);
+  line-height: 32px;
+  left: 18%;
+  font-family: Arial;
+}
+
+.disable-speaker:after {
+  position: absolute;
+  content: "/";
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  left: 0;
+  top: 0;
+  text-shadow: 3px 0px 0px rgba(0, 0, 0, 1);
+  line-height: 32px;
+  left: 18%;
+  font-family: Arial;
+}
+
+.connecting{
+  color: white;
+  margin-top: 55px;
+}
+ @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+ @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+p {
+  font-family: Lato;
+}
+
+.video-container{
+  height: 100vh;
+  // display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.agora_local{
+  background-color: white;
+  height: 100%;
+  // width: 100%;
+  // border: black 1px solid;
+  // margin: 8px;
+}
+.agora_local_fullscreen{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.full_screen{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.small_screen{
+  width: 30%;
+  height: 150px;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  /* bottom: 0; */
+  left: 70%;
+  top: -100%;
+}
+
+.agora_remote{
+  width: 30%;
+  height: 150px;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  /* bottom: 0; */
+  left: 70%;
+  top: -100%;
+}
+
+.video-buttons{
+    width: 100%;
+    bottom: -450px;
+    position: relative;
+    text-align: center;
+    z-index: 999;
+}
+
+.video-buttons i{
+  cursor: pointer;
+}
+
+.endCall{
+  color: red;
+}
+
+.startCall{
+  color: white;
+}
+
+.mic{
+  color: white;
+}
